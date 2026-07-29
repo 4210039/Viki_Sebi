@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Parallax, Reveal } from "./motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const PHOTOS = [
   { src: images.galleryVeil,    alt: "Hodváb a ruže",    rot: "-4deg", w: "sm:col-span-2", dist: 60,
@@ -54,6 +55,8 @@ export default function Gallery() {
           </Reveal>
         ))}
       </div>
+
+      <ContinueButton nextId="rsvp" variant="inline" />
 
       {active && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-eucalyptus/70 backdrop-blur-sm p-6"

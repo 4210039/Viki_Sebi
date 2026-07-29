@@ -2,6 +2,7 @@ import React from "react";
 import { Parallax, Reveal } from "./motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const DETAIL = images.castleDetail;
 
@@ -131,6 +132,8 @@ export default function Travel() {
           </div>
         </div>
       </div>
+
+      <ContinueButton nextId="gallery" variant="inline" />
     </section>
   );
 }

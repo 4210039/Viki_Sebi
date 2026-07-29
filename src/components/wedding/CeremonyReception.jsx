@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const CEREMONY = images.ceremony;
 const RECEPTION = images.reception;
@@ -22,6 +23,7 @@ export default function CeremonyReception() {
   const txt1O = useTransform(p, [0.04, 0.2, 0.4, 0.5], [0, 1, 1, 0]);
   const txt2Y = useTransform(p, [0, 1], [120, -60]);
   const txt2O = useTransform(p, [0.55, 0.72, 0.92, 1], [0, 1, 1, 0.6]);
+  const continueFade = useTransform(p, [0.65, 0.82, 1], [0, 1, 1]);
 
   return (
     <section id="venues" ref={ref} className="relative" style={{ height: "240vh" }}>
@@ -78,6 +80,8 @@ export default function CeremonyReception() {
             Záhrady zámku, Bojnice.
           </p>
         </motion.div>
+
+        <ContinueButton nextId="travel" style={{ opacity: continueFade }} />
       </div>
     </section>
   );

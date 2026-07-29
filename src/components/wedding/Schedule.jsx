@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const SCHEDULE = [
   { time: "15:00", title: "Príchod", text: "Hostia sú privítaní pohárom sektu v zámockých záhradách." },
@@ -36,6 +37,7 @@ export default function Schedule() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const p = useSpring(scrollYProgress, { stiffness: 120, damping: 26, mass: 0.4 });
   const imgY = useTransform(p, [0, 1], [-40, 40]);
+  const continueFade = useTransform(p, [0, 0.9, 1], [0, 0, 1]);
 
   return (
     <section id="schedule" ref={ref} className="relative" style={{ height: `${SCHEDULE.length * 60}vh` }}>
@@ -68,6 +70,8 @@ export default function Schedule() {
             ))}
           </div>
         </div>
+
+        <ContinueButton nextId="venues" style={{ opacity: continueFade }} />
       </div>
     </section>
   );

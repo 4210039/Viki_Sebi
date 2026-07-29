@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Reveal, Parallax } from "./motion";
+import ContinueButton from "./ContinueButton";
 
 const FAQS = [
   { q: "Je nejaký dress code?", a: "Garden formal — dlhé šaty, ľanové obleky, jemné tóny, ktoré ctia sezónu. Prosíme hostí, aby sa vyhli bielej a slonovinovej." },
@@ -51,6 +52,8 @@ export default function FAQ() {
           {FAQS.map((f, i) => <Item key={i} item={f} index={i} />)}
         </div>
       </div>
+
+      <ContinueButton nextId="closing" variant="inline" />
     </section>
   );
 }

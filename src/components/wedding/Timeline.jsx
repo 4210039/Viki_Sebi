@@ -2,6 +2,7 @@ import React from "react";
 import { Parallax, Reveal } from "./motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const FLORAL_DETAIL = images.timelineDetail;
 
@@ -87,6 +88,8 @@ export default function Timeline() {
           {MILESTONES.map((m, i) => <Milestone key={i} item={m} index={i} />)}
         </div>
       </div>
+
+      <ContinueButton nextId="schedule" variant="inline" />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -50,17 +51,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <motion.button
-        onClick={() => document.getElementById("story")?.scrollIntoView({ behavior: "smooth" })}
-        style={{ opacity: fade }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-gold animate-breathe"
-        aria-label="Začať príbeh"
-      >
-        <span className="eyebrow !text-[0.6rem]">Začať</span>
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1">
-          <path d="M12 4v16M6 14l6 6 6-6" />
-        </svg>
-      </motion.button>
+      <ContinueButton nextId="story" label="Začať" style={{ opacity: fade }} ariaLabel="Začať príbeh" />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const PORTRAIT = images.story;
 
@@ -69,10 +70,7 @@ export default function OurStory() {
           </motion.p>
         </div>
 
-        <motion.div style={{ opacity: fade }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold text-center">
-          <span className="eyebrow !text-[0.6rem]">Pokračovať</span>
-        </motion.div>
+        <ContinueButton nextId="timeline" style={{ opacity: fade }} />
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Reveal, Parallax } from "./motion";
 import { Image } from "@/components/ui/image";
 import { images } from "@/config/images";
+import ContinueButton from "./ContinueButton";
 
 const FLORAL_BOUQUET = images.rsvpBouquet;
 
@@ -93,6 +94,8 @@ export default function RSVP() {
         )}
         <div className="double-rule mt-12" />
       </Reveal>
+
+      <ContinueButton nextId="faq" variant="inline" />
     </section>
   );
 }
