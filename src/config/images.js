@@ -11,15 +11,15 @@
  */
 export const images = {
   hero: "01.png",             // Hero — full-bleed floral hero background
-  story: "02.png",            // OurStory — pinned portrait
-  timelineDetail: "03.png",   // Timeline — single rose detail shot
-  scheduleTable: "04.png",    // Schedule — floral table background
-  ceremony: "05.png",         // CeremonyReception — church panel
-  reception: "06.png",        // CeremonyReception — orangery panel
+  story: "05.png",            // OurStory — pinned portrait
+  timelineDetail: "02.png",   // Timeline — single rose detail shot
+  scheduleTable: "03.png",    // Schedule — floral table background
+  ceremony: "10.png",         // CeremonyReception — church panel
+  reception: "11.png",        // CeremonyReception — orangery panel
   castleDetail: "07.png",     // Travel (accommodation detail) & Gallery (castle) — same asset, reused
   galleryVeil: "08.png",      // Gallery — silk & roses
-  galleryBouquet: "09.png",   // Gallery — bridal bouquet
-  galleryHills: "10.png",     // Gallery — hills
-  closingSunset: "11.png",    // Closing — golden hour
-  rsvpBouquet: "12.png",      // RSVP — floral bouquet
+  galleryBouquet: "06.png",   // Gallery — bridal bouquet
+  galleryHills: "09.png",     // Gallery — hills
+  closingSunset: "12.png",    // Closing — golden hour
+  rsvpBouquet: "04.png",      // RSVP — floral bouquet
 };
